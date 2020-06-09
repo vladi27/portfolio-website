@@ -1,0 +1,263 @@
+extends ../layouts/default.pug
+
+block config
+
+    //- Global Page Configuration
+    - var pageTitle = 'Portfolio'
+
+    append css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/aos@next/dist/aos.css')
+    link(rel='stylesheet', href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css")
+
+
+block content
+
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+
+    //- include mixins/header.pug
+    //- +header({
+    //-     pageHeaderBg: 'bg-img-cover overlay overlay-30',
+    //-     pageHeaderBgImg: 'background-image: url("https://source.unsplash.com/q10VITrVYUM/1500x900")',
+    //-     pageHeaderStyle: 'page-header-dark',
+    //-     svgBorderAngled: false,
+    //-     svgBorderRounded: true,
+    //-     svgBorderWaves: false,
+    //-     svgBorderFill: 'text-white'
+    //- })
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-dark',
+        pageHeaderStyle: 'page-header-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
+    })
+
+        .page-header-content.py-5
+            .container
+                .row.justify-content-center
+                    .col-xl-8.col-lg-10.text-center
+                        img(src='../../assets/ava.png', style='width: 18rem', data-aos='slide-down').mb-4
+                        div(data-aos='fade-up')
+                            h1.page-header-title Hello, my name is Vlad Bulvakhter
+                            p.page-header-text I am a full-stack developer experienced in React, Node.js and Ruby on Rails
+                            a.btn.btn-marketing.rounded-pill.btn-primary.lift.lift-lg(href='../../assets/Vlad_Bulvakhter_Resume.pdf', data-aos='slide-up', data-aos-delay='100', download='Vlad Bulvakhter Resume')
+                                i.fas.fa-file-pdf.mr-2
+                                | Download Resume
+
+
+    //- * * * * * * * * * * *
+    //- * * Intro Section * *
+    //- * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-white',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
+    })
+
+        .container
+
+            .text-uppercase-expanded.small.mb-2 About Me
+            hr.mt-0.mb-5
+
+            .row
+                .col-lg-8
+                    p Apart from being a marketing analyst, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
+                    p When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the marketing management world.
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
+    })
+
+        .container
+            .row.justify-content-center
+                .col-lg-6
+                    .mb-5.text-center
+                        .text-lg.text-uppercase-expanded.text-primary.mb-2 My stack
+                        p.lead.mb-0 Here's what I've got
+            .row.text-center
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-red.text-white.mb-1
+                        i.devicon-d3js-plain
+                    h5 D3
+
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-yellow.text-white.mb-1
+                        i.devicon-javascript-plain
+                    h5 JavaScript
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                        i.devicon-ruby-plain
+                    h5 Ruby
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                        i.devicon-rails-plain
+                    h5 Rails
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                        i.devicon-react-plain
+                    h5 React
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                        i.devicon-react-plain
+                    h5 Redux
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                        i.devicon-webpack-plain
+                    h5 Webpack
+                .col-lg-4.mb-5.mb-lg-0
+                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                        i.devicon-nodejs-plain
+                    h5 Node
+                .col-lg-4
+                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                        i.devicon-babel-plain
+                    h5 Babel
+
+    //- * * * * * * * * *
+    //- * * Portfolio * *
+    //- * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-white',
+        sectionPadding: 'py-15',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white mt-n10'
+    })
+
+        .container.z-1
+            .row.justify-content-center
+                .col-lg-6
+                    .mb-5.text-center
+                        .text-lg.text-uppercase-expanded.text-primary.mb-2 My Projects
+            .card.mb-5(data-aos='fade-right')
+                .row.no-gutters
+                    .col-md-6
+                        img.img-fluid(src='https://source.unsplash.com/ksBiPfELh9Y/800x500', alt='f')
+                    .col-md-6
+                        .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 BART
+                            p.card-text.font-weight-light.mb-4
+                                | View Project
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
+            .card.mb-5(data-aos='fade-left')
+                .row.no-gutters
+                    .col-md-6.order-1.order-md-0
+                        .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Balitello
+                            p.card-text.font-weight-light.mb-4
+                                | Designer Socks
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
+                    .col-md-6.order-0.order-md-1
+                        img.img-fluid(src='https://source.unsplash.com/XfHvAwu6E8E/800x550', alt='...')
+            .card(data-aos='fade-right')
+                .row.no-gutters
+                    .col-md-6
+                        img.img-fluid(src='https://source.unsplash.com/7LNatQYMzm4/800x550', alt='...')
+                    .col-md-6
+                        .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Headphones
+                            p.card-text.font-weight-light.mb-4
+                                | Premium Audio
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
+
+
+
+        //- .container
+        //-     .row.justify-content-center
+        //-         .col-lg-6
+        //-             .mb-5.text-center
+        //-                 .text-xs.text-uppercase-expanded.text-primary.mb-2 My Projects
+        //-     .card-columns.card-columns-portfolio
+        //-         a.card.card-portfolio(href='https://vladi27.github.io/TrackBartLive/#/',  target='_blank')
+        //-             img.card-img-top(src='https://source.unsplash.com/ksBiPfELh9Y/400x500', alt='...')
+        //-             .card-body
+        //-                 .card-title Bart Project djjdjf djdjjdjj djdjj djjdj djdj
+        //-         a.card.card-portfolio(href='#!')
+        //-             img.card-img-top(src='https://source.unsplash.com/-1_RZL8BGBM/400x500', alt='...')
+        //-             .card-body
+        //-                 .card-title Yello
+        //-         a.card.card-portfolio(href='#!')
+        //-             img.card-img-top(src='https://source.unsplash.com/EMPZ7yRZoGw/400x500', alt='...')
+        //-             .card-body
+        //-                 .card-title VC Money
+
+
+    //- * * * * * * * * * * *
+    //- * * Intro Section * *
+    //- * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+
+        .container
+            .row.justify-content-center
+                .col-lg-8.text-center
+                    h2 Contact me
+                    p.mb-5 I am available for contract work, when you're ready - let me know!
+                    .row
+                        .col
+                            .card
+                                .card-body
+                                    .icon-stack.icon-stack-lg.bg-orange.text-white.mb-3
+                                        i(data-feather='mail')
+                                    .small
+                                        a(href='#!') vbulvakhter@gmail.com
+                        .col
+                            .card
+                                .card-body
+                                    .icon-stack.icon-stack-lg.bg-green.text-white.mb-3
+                                        i(data-feather='smartphone')
+                                    .small
+                                        | 415-260-7829
+
+
+
+block footer
+    //- include mixins/footer.pug
+    //- +footer({
+    //-     footerBg: 'bg-dark',
+    //-     footerStyle: 'footer-dark'
+    //- })
+
+    append scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js')
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+        AOS.init({
+            disable: 'mobile',
+            duration: 600,
+            once: true
+        });
