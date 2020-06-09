@@ -3,18 +3,18 @@ mixin navbar(options)
     nav.navbar.navbar-marketing.navbar-expand-lg(class=options.navbarBg, class=options.navbarStyle, class=options.navbarPosition)
         div(class=options.navbarContainer)
             a.navbar-brand(href='index.html', class=options.navbarBrandColor)
-                | SB UI Kit Pro
+                | Vlad Bulvakhter
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                 i(data-feather='menu')
             #navbarSupportedContent.collapse.navbar-collapse
                 ul.navbar-nav.ml-auto.mr-lg-5
                     li.nav-item
                         a.nav-link(href='index.html')
-                            | Home 
+                            | Home
                     li.nav-item.dropdown.dropdown-xl.no-caret
-                        a#navbarDropdownDemos.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                            | Landings
-                            i.fas.fa-chevron-right.dropdown-arrow
+                        a#navbarDropdownDemos.nav-link.dropdown-toggle(href='#projects')
+                            | Projects
+                            i.fas.fa-arrow-down.dropdown-arrow
                         .dropdown-menu.dropdown-menu-right.animated--fade-in-up.mr-lg-n15(aria-labelledby='navbarDropdownDemos')
                             .row.no-gutters
                                 .col-lg-5.p-lg-3.bg-img-cover.overlay.overlay-primary.overlay-70.d-none.d-lg-block(style='background-image: url("https://source.unsplash.com/mqO0Rf-PUMs/500x350")')
@@ -54,9 +54,9 @@ mixin navbar(options)
                                             a.dropdown-item(href='header-inner-page.html') Inner Page
                                             a.dropdown-item(href='header-nav-only.html') Nav Only
                     li.nav-item.dropdown.dropdown-lg.no-caret
-                        a#navbarDropdownPages.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                            | Pages
-                            i.fas.fa-chevron-right.dropdown-arrow
+                        a#navbarDropdownPages.nav-link.dropdown-toggle(href='#about')
+                            | About Me
+                            i.fas.fa-arrow-down.dropdown-arrow
                         .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='navbarDropdownPages')
                             .row.no-gutters
                                 .col-lg-6.p-lg-5
@@ -91,8 +91,8 @@ mixin navbar(options)
                                     a.dropdown-item(href='page-portfolio-project.html') Project
                     li.nav-item.dropdown.no-caret
                         a#navbarDropdownDocs.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                            | Documentation
-                            i.fas.fa-chevron-right.dropdown-arrow
+                            | My Stack
+                            i.fas.fa-arrow-down.dropdown-arrow
                         .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='navbarDropdownDocs')
                             a.dropdown-item.py-3(href='https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart', target='_blank')
                                 .icon-stack.bg-primary-soft.text-primary.mr-4
@@ -114,7 +114,7 @@ mixin navbar(options)
                                 div
                                     .small.text-gray-500 Changelog
                                     | Updates and changes
-                                
-                a(href="https://shop.startbootstrap.com/sb-ui-kit-pro", class=options.navbarBtnColor).btn.rounded-pill.px-4.ml-lg-4
-                    | Buy Now
-                    i.fas.fa-arrow-right.ml-1
+                    li.nav-item.dropdown.no-caret
+                        a#navbarDropdownDemos.nav-link.dropdown-toggle(href='#projects')
+                            | Contact
+                            i.fas.fa-arrow-down.dropdown-arrow

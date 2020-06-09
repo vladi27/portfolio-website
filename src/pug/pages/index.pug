@@ -16,7 +16,14 @@ block content
     //- * * * * * * * *
     //- * * Navbar  * *
     //- * * * * * * * *
-
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-white',
+        navbarStyle: 'navbar-light',
+        navbarBrandColor: 'text-dark',
+        navbarBtnColor: 'btn-primary',
+        navbarContainer: 'container',
+    })
 
 
     //- * * * * * * * * * *
@@ -49,10 +56,10 @@ block content
                 .row.justify-content-center
                     .col-xl-8.col-lg-10.text-center
                         img(src='../../assets/ava.png', style='width: 18rem', data-aos='slide-down').mb-4
-                        div(data-aos='fade-up')
-                            h1.page-header-title Hello, my name is Vlad Bulvakhter
-                            p.page-header-text I am a full-stack developer experienced in React, Node.js and Ruby on Rails
-                            a.btn.btn-marketing.rounded-pill.btn-primary.lift.lift-lg(href='../../assets/Vlad_Bulvakhter_Resume.pdf', data-aos='slide-up', data-aos-delay='100', download='Vlad Bulvakhter Resume')
+                        div(data-aos='slide-left')
+                            h1.page-header-title.typewriter Hello, my name is Vlad Bulvakhter
+                            p.page-header-text(data-aos='slide-up',  data-aos-delay='100') I am a full-stack developer experienced in React, Node.js and Ruby on Rails
+                            a.btn.btn-marketing.rounded-pill.btn-primary.lift.lift-lg(href='../../assets/Vlad_Bulvakhter_Resume.pdf', data-aos='fade-up', data-aos-delay='100', download='Vlad Bulvakhter Resume')
                                 i.fas.fa-file-pdf.mr-2
                                 | Download Resume
 
@@ -71,7 +78,7 @@ block content
         svgBorderFill: 'text-white'
     })
 
-        .container
+        .container(id='about')
 
             .text-uppercase-expanded.small.mb-2 About Me
             hr.mt-0.mb-5
@@ -155,7 +162,7 @@ block content
                 .col-lg-6
                     .mb-5.text-center
                         .text-lg.text-uppercase-expanded.text-primary.mb-2 My Projects
-            .card.mb-5(data-aos='fade-right')
+            .card.mb-5(data-aos='fade-right',  data-aos-delay='200', id="projects")
                 .row.no-gutters
                     .col-md-6
                         img.img-fluid(src='https://source.unsplash.com/ksBiPfELh9Y/800x500', alt='f')
@@ -163,9 +170,9 @@ block content
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
                             h3.card-title.font-weight-bold.text-uppercase.mb-2 BART
                             p.card-text.font-weight-light.mb-4
-                                | View Project
+                                | BART Project-React, Redux
                             a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
-            .card.mb-5(data-aos='fade-left')
+            .card.mb-5(data-aos='fade-left',  data-aos-delay='200')
                 .row.no-gutters
                     .col-md-6.order-1.order-md-0
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
@@ -175,7 +182,7 @@ block content
                             a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
                     .col-md-6.order-0.order-md-1
                         img.img-fluid(src='https://source.unsplash.com/XfHvAwu6E8E/800x550', alt='...')
-            .card(data-aos='fade-right')
+            .card(data-aos='fade-right', data-aos-delay='200')
                 .row.no-gutters
                     .col-md-6
                         img.img-fluid(src='https://source.unsplash.com/7LNatQYMzm4/800x550', alt='...')
@@ -234,14 +241,21 @@ block content
                                     .icon-stack.icon-stack-lg.bg-orange.text-white.mb-3
                                         i(data-feather='mail')
                                     .small
-                                        a(href='#!') vbulvakhter@gmail.com
+                                        a(href='mailto:vbulvakhter@gmail.com') vbulvakhter@gmail.com
                         .col
                             .card
                                 .card-body
                                     .icon-stack.icon-stack-lg.bg-green.text-white.mb-3
                                         i(data-feather='smartphone')
                                     .small
-                                        | 415-260-7829
+                                        a(href="4152607829") 415-260-7829
+                        .col
+                            .card
+                                .card-body
+                                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-3
+                                        i(data-feather='download')
+                                    .small
+                                        a(href='../../assets/Vlad_Bulvakhter_Resume.pdf', download='Vlad Bulvakhter Resume') Resume
 
 
 
