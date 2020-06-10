@@ -2,14 +2,14 @@ mixin navbar(options)
 
     nav.navbar.navbar-marketing.navbar-expand-lg(class=options.navbarBg, class=options.navbarStyle, class=options.navbarPosition)
         div(class=options.navbarContainer)
-            a.navbar-brand(href='index.html', class=options.navbarBrandColor)
+            a.navbar-brand(href='#', class=options.navbarBrandColor)
                 | Vlad Bulvakhter
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                 i(data-feather='menu')
             #navbarSupportedContent.collapse.navbar-collapse
                 ul.navbar-nav.ml-auto.mr-lg-5
                     li.nav-item
-                        a.nav-link(href='index.html')
+                        a.nav-link(href='#')
                             | Home
                     li.nav-item.dropdown.dropdown-xl.no-caret
                         a#navbarDropdownDemos.nav-link.dropdown-toggle(href='#projects')

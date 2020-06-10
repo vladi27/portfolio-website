@@ -8,7 +8,7 @@
   }
 }
 .dev-green {
-  color: #60be86;
+  color: #1e3054;
 }
 // .thumbnail:hover {
 //   background-color: #60be86;
@@ -20,15 +20,15 @@
 // }
 
 .thumbicon {
-  color: #60be86;
+  color: #1e3054;
 }
 
 .thumbnail {
   background-color: white;
 
   &:hover {
-    background-color: #60be86;
-    cursor: pointer;
+    background-color: #1e3054;
+
     transition: 0.2s;
     .thumbicon {
       color: white;
