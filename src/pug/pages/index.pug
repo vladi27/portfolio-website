@@ -4,6 +4,7 @@ block config
 
     //- Global Page Configuration
     - var pageTitle = 'Portfolio'
+    - var inter = '<a href="https://www.w3schools.com"> LinkedIn </a>'
 
     append css
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
@@ -12,6 +13,7 @@ block config
 
 
 block content
+
 
     //- * * * * * * * *
     //- * * Navbar  * *
@@ -58,7 +60,7 @@ block content
                         img(src='../../assets/ava.png', style='width: 18rem', data-aos='slide-down').mb-4
                         div(data-aos='slide-left')
                             h1.page-header-title.typewriter
-                            p.page-header-text.dark(data-aos='slide-up',  data-aos-delay='100') I am a full-stack developer experienced in React, Node.js and Ruby on Rails
+                            p.page-header-text.dark(data-aos='slide-up',  data-aos-delay='100') I am a full-stack developer experienced based in SF.
                             a.btn.btn-marketing.rounded-pill.btn-primary.lift.lift-lg(href='../../assets/Vlad_Bulvakhter_Resume.pdf',  download='Vlad Bulvakhter Resume')
                                 i.fas.fa-file-pdf.mr-2
                                 | Download Resume
@@ -67,6 +69,8 @@ block content
     //- * * * * * * * * * * *
     //- * * Intro Section * *
     //- * * * * * * * * * * *
+
+      p.lead.mb-0 Here's what I've got
 
     include mixins/section.pug
     +section({
@@ -85,8 +89,10 @@ block content
 
             .row
                 .col-lg-8
-                    p Apart from being a marketing analyst, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
-                    p When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the marketing management world.
+                    p I’m Vlad and I build things. Originally from Kazakhstan, I moved to the US when I was sixteen and it’s been a crazy ride since then! I’m passionate about data and how we can leverage data to change the world for the better.
+                    p Aside from spending time on debugging my code, I enjoy exploring new taco places in SF, playing and watching soccer, and hiking in the beautiful Presidio. If you want to get in touch, connect with me on #[a(href="https://www.linkedin.com/in/vbulvakhter/", target='_blank') LinkedIn] or shoot me a note at #[a(href='mailto:vbulvakhter@gmail.com') vbulvakhter@gmail.com].
+
+
 
     include mixins/section.pug
     +section({
@@ -103,7 +109,7 @@ block content
                 .col-lg-6
                     .mb-5.text-center
                         .text-lg.text-uppercase-expanded.text-primary.mb-2 My stack
-                        p.lead.mb-0 Here's what I've got
+
             .row.text-center
                 .col-lg-4.mb-5.mb-lg-0
                     .icon-stack.icon-stack-lg.thumbnail.mb-1
@@ -192,18 +198,18 @@ block content
                         img.img-fluid(src='https://source.unsplash.com/ksBiPfELh9Y/800x500', alt='f')
                     .col-md-6
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
-                            h3.card-title.font-weight-bold.text-uppercase.mb-2(id="projects") BART
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2(id="projects") Where is my BART?
                             p.card-text.font-weight-light.mb-4
-                                | BART Project-React, Redux
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
+                                | A dynamic web app to track BART train locations in real-time.
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='https://vladi27.github.io/TrackBartLive/#/',  target='_blank') View
             .card.mb-5(data-aos='fade-left',  data-aos-delay='150')
                 .row.no-gutters
                     .col-md-6.order-1.order-md-0
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
-                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Yello
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Yello!
                             p.card-text.font-weight-light.mb-4
-                                | Full-Stack Trello Clone
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
+                                | A single-page application Trello clone for organizing and managing projects via customizable personal boards.
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='https://yello-fsp.herokuapp.com/#/',  target='_blank') View
                     .col-md-6.order-0.order-md-1
                         img.img-fluid(src='https://source.unsplash.com/-1_RZL8BGBM/800x550', alt='...')
             .card(data-aos='fade-right', data-aos-delay='200')
@@ -212,10 +218,10 @@ block content
                         img.img-fluid(src='https://source.unsplash.com/EMPZ7yRZoGw/800x550', alt='...')
                     .col-md-6
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
-                            h3.card-title.font-weight-bold.text-uppercase.mb-2 VC Money
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Venture Money
                             p.card-text.font-weight-light.mb-4
-                                | Data Visualization
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
+                                | An interactive data-visualization app to engage with venture funding data segmented by industry,rounds and years.
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='https://vladi27.github.io/startup-funding-rounds/',  target='_blank') View
 
 
 
@@ -256,24 +262,24 @@ block content
         .container(id="contact")
             .row.justify-content-center
                 .col-lg-8.text-center
-                    h2 Contact me
-                    p.mb-5 I am available for contract work, when you're ready - let me know!
+                    .text-lg.text-uppercase-expanded.text-dark.mb-2 Contact Me
+
             .row.justify-content-center
-                .icon-list-social
+                .icon-list-social.mt-5
                     .col-lg-4
 
-                        a.icon-list-social-link(href='javascript:void(0);')
+                        a.icon-list-social-link(href='https://www.linkedin.com/in/vbulvakhter/', target='_blank')
                             i.fab.fa-linkedin
                     .col-lg-4
-
-                        a.icon-list-social-link(href='javascript:void(0);')
-                            i.far.fa-envelope
-                    .col-lg-4
-
-                        a.icon-list-social-link(href='javascript:void(0);')
+                        a.icon-list-social-link(href='https://github.com/vladi27', target='_blank')
                             i.fab.fa-github
                     .col-lg-4
-                        a.icon-list-social-link(href='javascript:void(0);')
+
+                        a.icon-list-social-link(href='mailto:vbulvakhter@gmail.com')
+                            i.far.fa-envelope
+
+                    .col-lg-4
+                        a.icon-list-social-link(href='../../assets/Vlad_Bulvakhter_Resume.pdf', download='Vlad Bulvakhter Resume')
                             i.far.fa-file
 
 
