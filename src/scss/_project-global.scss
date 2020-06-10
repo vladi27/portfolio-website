@@ -10,3 +10,28 @@
 .dev-green {
   color: #60be86;
 }
+// .thumbnail:hover {
+//   background-color: #60be86;
+//   cursor: pointer;
+//   transition: 0.2s;
+// }
+// .thumbnail {
+//   background-color: white;
+// }
+
+.thumbicon {
+  color: #60be86;
+}
+
+.thumbnail {
+  background-color: white;
+
+  &:hover {
+    background-color: #60be86;
+    cursor: pointer;
+    transition: 0.2s;
+    .thumbicon {
+      color: white;
+    }
+  }
+}

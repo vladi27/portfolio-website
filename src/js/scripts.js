@@ -65,7 +65,11 @@
     }, 400);
   });
 
-  var _CONTENT = ["Hi, my name is Vlad Bulvakhter.", "It's nice to meet you!"];
+  var _CONTENT = [
+    "Hi, my name is Vlad Bulvakhter.",
+    "It's nice to e-meet you!",
+    "Let me know if you have any questions :)",
+  ];
 
   // Current sentence being processed
   var _PART = 0;
@@ -78,13 +82,20 @@
 
   // Element that holds the text
   var _ELEMENT = document.querySelector(".typewriter");
+  var initInterval = 400;
 
   // Cursor element
   //var _CURSOR = document.querySelector(".cursor");
 
   // Implements typing effect
+  var count = 0;
   function Type() {
     // Get substring with 1 characater added
+    if (count < 9) {
+      count++;
+      return;
+    }
+    initInterval = 100;
     var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
     // _ELEMENT.syle.margin = auto;
     _ELEMENT.innerHTML = text;
@@ -116,8 +127,10 @@
       clearInterval(_INTERVAL_VAL);
 
       // If current sentence was last then display the first one, else move to the next
-      if (_PART == _CONTENT.length - 1) _PART = 0;
-      else _PART++;
+      if (_PART == _CONTENT.length - 1) {
+        _PART = 0;
+        count = 0;
+      } else _PART++;
 
       _PART_INDEX = 0;
 
@@ -126,7 +139,7 @@
         // _CURSOR.style.display = "inline-block";
         _ELEMENT.style.display = "inline";
         _INTERVAL_VAL = setInterval(Type, 100);
-      }, 100);
+      }, 500);
     }
   }
 
