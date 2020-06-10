@@ -36,7 +36,8 @@
         "url": "https://github.com/StartBootstrap/sb-ui-kit-pro.git"
     },
     "dependencies": {
-        "bootstrap": "4.4.1"
+        "bootstrap": "4.4.1",
+        "caniuse-lite": "^1.0.30001079"
     },
     "devDependencies": {
         "autoprefixer": "9.7.4",

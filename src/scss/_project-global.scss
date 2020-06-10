@@ -1,2 +1,12 @@
 // This file is intentionally blank
 // Use this file to override SCSS within the project, or to add new SCSS for creating your own CSS components
+.icon-list-social {
+  display: flex;
+  .icon-list-social-link {
+    font-size: 1.5rem;
+    margin: auto;
+  }
+}
+.dev-green {
+  color: #60be86;
+}

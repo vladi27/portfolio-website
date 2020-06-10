@@ -57,7 +57,7 @@ block content
                     .col-xl-8.col-lg-10.text-center
                         img(src='../../assets/ava.png', style='width: 18rem', data-aos='slide-down').mb-4
                         div(data-aos='slide-left')
-                            h1.page-header-title.typewriter Hello, my name is Vlad Bulvakhter
+                            h1.page-header-title.typewriter placeholder
                             p.page-header-text(data-aos='slide-up',  data-aos-delay='100') I am a full-stack developer experienced in React, Node.js and Ruby on Rails
                             a.btn.btn-marketing.rounded-pill.btn-primary.lift.lift-lg(href='../../assets/Vlad_Bulvakhter_Resume.pdf', data-aos='fade-up', data-aos-delay='100', download='Vlad Bulvakhter Resume')
                                 i.fas.fa-file-pdf.mr-2
@@ -80,7 +80,7 @@ block content
 
         .container(id='about')
 
-            .text-uppercase-expanded.small.mb-2 About Me
+            .text-uppercase-expanded.text-primary.small.mb-2 About Me
             hr.mt-0.mb-5
 
             .row
@@ -98,7 +98,7 @@ block content
         svgBorderFill: 'text-white'
     })
 
-        .container
+        .container(id="stack")
             .row.justify-content-center
                 .col-lg-6
                     .mb-5.text-center
@@ -106,42 +106,66 @@ block content
                         p.lead.mb-0 Here's what I've got
             .row.text-center
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-red.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-d3js-plain
-                    h5 D3
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green D3
 
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-yellow.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-javascript-plain
-                    h5 JavaScript
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green JavaScript
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-ruby-plain
-                    h5 Ruby
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Ruby
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-rails-plain
-                    h5 Rails
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Rails
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-react-plain
-                    h5 React
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green React
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-react-plain
-                    h5 Redux
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Redux
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-webpack-plain
-                    h5 Webpack
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Webpack
                 .col-lg-4.mb-5.mb-lg-0
-                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-nodejs-plain
-                    h5 Node
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Node.js
                 .col-lg-4
-                    .icon-stack.icon-stack-lg.bg-dark.text-white.mb-1
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
                         i.devicon-babel-plain
-                    h5 Babel
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green Babel
+                .col-lg-4
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
+                        i.devicon-css3-plain
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green CSS3
+                .col-lg-4
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
+                        i.devicon-html5-plain
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green HTML5
+                .col-lg-4
+                    .icon-stack.icon-stack-lg.bg-dev-green.text-white.mb-1
+                        i.devicon-postgresql-plain
+                    hr.mt-2.mb-2.border-dev-green(width="25%")
+                    h6.dev-green PostgreSQL
 
     //- * * * * * * * * *
     //- * * Portfolio * *
@@ -162,7 +186,7 @@ block content
                 .col-lg-6
                     .mb-5.text-center
                         .text-lg.text-uppercase-expanded.text-primary.mb-2 My Projects
-            .card.mb-5(data-aos='fade-right',  data-aos-delay='200', id="projects")
+            .card.mb-5(data-aos='fade-right',  data-aos-delay='100', id="projects")
                 .row.no-gutters
                     .col-md-6
                         img.img-fluid(src='https://source.unsplash.com/ksBiPfELh9Y/800x500', alt='f')
@@ -171,27 +195,27 @@ block content
                             h3.card-title.font-weight-bold.text-uppercase.mb-2 BART
                             p.card-text.font-weight-light.mb-4
                                 | BART Project-React, Redux
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
-            .card.mb-5(data-aos='fade-left',  data-aos-delay='200')
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
+            .card.mb-5(data-aos='fade-left',  data-aos-delay='150')
                 .row.no-gutters
                     .col-md-6.order-1.order-md-0
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
-                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Balitello
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Yello
                             p.card-text.font-weight-light.mb-4
-                                | Designer Socks
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
+                                | Full-Stack Trello Clone
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
                     .col-md-6.order-0.order-md-1
-                        img.img-fluid(src='https://source.unsplash.com/XfHvAwu6E8E/800x550', alt='...')
+                        img.img-fluid(src='https://source.unsplash.com/-1_RZL8BGBM/800x550', alt='...')
             .card(data-aos='fade-right', data-aos-delay='200')
                 .row.no-gutters
                     .col-md-6
-                        img.img-fluid(src='https://source.unsplash.com/7LNatQYMzm4/800x550', alt='...')
+                        img.img-fluid(src='https://source.unsplash.com/EMPZ7yRZoGw/800x550', alt='...')
                     .col-md-6
                         .card-body.d-flex.align-items-center.justify-content-center.h-100.flex-column
-                            h3.card-title.font-weight-bold.text-uppercase.mb-2 Headphones
+                            h3.card-title.font-weight-bold.text-uppercase.mb-2 VC Money
                             p.card-text.font-weight-light.mb-4
-                                | Premium Audio
-                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View Case Study
+                                | Data Visualization
+                            a.btn.btn-outline-dark.btn-marketing.rounded-pill(href='#!') View
 
 
 
@@ -229,33 +253,28 @@ block content
         svgBorderFill: 'text-dark'
     })
 
-        .container
+        .container(id="contact")
             .row.justify-content-center
                 .col-lg-8.text-center
                     h2 Contact me
                     p.mb-5 I am available for contract work, when you're ready - let me know!
-                    .row
-                        .col
-                            .card
-                                .card-body
-                                    .icon-stack.icon-stack-lg.bg-orange.text-white.mb-3
-                                        i(data-feather='mail')
-                                    .small
-                                        a(href='mailto:vbulvakhter@gmail.com') vbulvakhter@gmail.com
-                        .col
-                            .card
-                                .card-body
-                                    .icon-stack.icon-stack-lg.bg-green.text-white.mb-3
-                                        i(data-feather='smartphone')
-                                    .small
-                                        a(href="4152607829") 415-260-7829
-                        .col
-                            .card
-                                .card-body
-                                    .icon-stack.icon-stack-lg.bg-blue.text-white.mb-3
-                                        i(data-feather='download')
-                                    .small
-                                        a(href='../../assets/Vlad_Bulvakhter_Resume.pdf', download='Vlad Bulvakhter Resume') Resume
+            .row.justify-content-center
+                .icon-list-social
+                    .col-lg-4
+
+                        a.icon-list-social-link(href='javascript:void(0);')
+                            i.fab.fa-linkedin
+                    .col-lg-4
+
+                        a.icon-list-social-link(href='javascript:void(0);')
+                            i.far.fa-envelope
+                    .col-lg-4
+
+                        a.icon-list-social-link(href='javascript:void(0);')
+                            i.fab.fa-github
+                    .col-lg-4
+                        a.icon-list-social-link(href='javascript:void(0);')
+                            i.far.fa-file
 
 
 
@@ -275,3 +294,28 @@ block footer
             duration: 600,
             once: true
         });
+
+        //-   h2 Contact me
+        //-             p.mb-5 I am available for contract work, when you're ready - let me know!
+        //-             .row
+        //-                 .col
+        //-                     .card
+        //-                         .card-body
+        //-                             .icon-stack.icon-stack-lg.bg-orange.text-white.mb-3
+        //-                                 i(data-feather='mail')
+        //-                             .small
+        //-                                 a(href='mailto:vbulvakhter@gmail.com') vbulvakhter@gmail.com
+        //-                 .col
+        //-                     .card
+        //-                         .card-body
+        //-                             .icon-stack.icon-stack-lg.bg-green.text-white.mb-3
+        //-                                 i(data-feather='smartphone')
+        //-                             .small
+        //-                                 a(href="4152607829") 415-260-7829
+        //-                 .col
+        //-                     .card
+        //-                         .card-body
+        //-                             .icon-stack.icon-stack-lg.bg-blue.text-white.mb-3
+        //-                                 i(data-feather='download')
+        //-                             .small
+        //-                                 a(href='../../assets/Vlad_Bulvakhter_Resume.pdf', download='Vlad Bulvakhter Resume') Resume

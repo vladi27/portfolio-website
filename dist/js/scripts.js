@@ -70,7 +70,7 @@
     }, 400);
   });
 
-  var _CONTENT = ["Hi, my name is Vlad Bulvakhter", "It's nice to meet you!"];
+  var _CONTENT = ["Hi, my name is Vlad Bulvakhter.", "It's nice to meet you!"];
 
   // Current sentence being processed
   var _PART = 0;
@@ -129,9 +129,9 @@
       // Start to display the next sentence after some time
       setTimeout(function() {
         // _CURSOR.style.display = "inline-block";
-        _ELEMENT.style.display = "inline-block";
+        _ELEMENT.style.display = "inline";
         _INTERVAL_VAL = setInterval(Type, 100);
-      }, 200);
+      }, 100);
     }
   }
 
