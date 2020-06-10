@@ -62,13 +62,14 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
-  var iconButton = $("projects");
-  iconButton.on("click", function() {
-    $(iconButton).removeClass("aos-animate");
-    setTimeout(function() {
-      $(iconButton).addClass("aos-animate");
-    }, 200);
-  });
+
+  // var iconButton = $("projects");
+  // iconButton.on("click", function() {
+  //   $(iconButton).removeClass("aos-animate");
+  //   setTimeout(function() {
+  //     $(iconButton).addClass("aos-animate");
+  //   }, 200);
+  // });
 
   var _CONTENT = [
     "Hi there, my name is Vlad Bulvakhter.",
