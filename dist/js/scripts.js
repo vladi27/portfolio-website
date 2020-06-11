@@ -71,19 +71,19 @@
   //   }, 200);
   // });
 
-  function checkWidth() {
-    console.log("cc");
-    if ($(window).width() > 514) {
-      $("#anime").addClass("typewriter");
-      console.log($("#anime"));
-    } else {
-      $("#anime").text("Hi there!");
-      $("#anime").removeClass("typewriter");
-    }
-  }
+  // function checkWidth() {
+  //   console.log("cc");
+  //   if ($(window).width() > 514) {
+  //     $("#anime").addClass("typewriter");
+  //     console.log($("#anime"));
+  //   } else {
+  //     $("#anime").text("Hi there!");
+  //     $("#anime").removeClass("typewriter");
+  //   }
+  // }
 
-  checkWidth();
-  $(window).resize(checkWidth);
+  // checkWidth();
+  // $(window).resize(checkWidth);
 
   var _CONTENT = [
     "Hi there, my name is Vlad Bulvakhter.",
@@ -108,13 +108,20 @@
   //var _CURSOR = document.querySelector(".cursor");
 
   // Implements typing effect
+
   var count = 0;
   function Type() {
     // Get substring with 1 characater added
-
-    if (_ELEMENT.classList.contains("typewriter") == false) {
-      return;
+    if ($(window).width() < 514) {
+      _CONTENT = ["Hey there!", "I'm Vlad.", "Welcome!"];
+    } else {
+      _CONTENT = [
+        "Hi there, my name is Vlad Bulvakhter.",
+        "Welcome to my portfolio website!",
+        "Let's connect if you like what I do! :)",
+      ];
     }
+
     if (count < 9) {
       count++;
       return;
