@@ -71,6 +71,20 @@
   //   }, 200);
   // });
 
+  function checkWidth() {
+    console.log("cc");
+    if ($(window).width() > 514) {
+      $("#anime").addClass("typewriter");
+      console.log($("#anime"));
+    } else {
+      $("#anime").text("Hi there!");
+      $("#anime").removeClass("typewriter");
+    }
+  }
+
+  checkWidth();
+  $(window).resize(checkWidth);
+
   var _CONTENT = [
     "Hi there, my name is Vlad Bulvakhter.",
     "Welcome to my portfolio website!",
@@ -87,7 +101,7 @@
   var _INTERVAL_VAL;
 
   // Element that holds the text
-  var _ELEMENT = document.querySelector(".typewriter");
+  var _ELEMENT = document.querySelector("#anime");
   var initInterval = 400;
 
   // Cursor element
@@ -97,6 +111,10 @@
   var count = 0;
   function Type() {
     // Get substring with 1 characater added
+
+    if (_ELEMENT.classList.contains("typewriter") == false) {
+      return;
+    }
     if (count < 9) {
       count++;
       return;
