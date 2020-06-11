@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] ||
-            (b[l] = function() {
-                (b[l].q = b[l].q || []).push(arguments);
-            });
-        b[l].l = +new Date();
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r);
-    })(window, document, 'script', 'ga');
-    ga('create', NaN);
-    ga('send', 'pageview');
-</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css" /><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+<!DOCTYPE html><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css" /><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -23,6 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169231583-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-169231583-1');
+        </script>
         <title>Portfolio - Vlad Bulvakhter's Portfolio</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />

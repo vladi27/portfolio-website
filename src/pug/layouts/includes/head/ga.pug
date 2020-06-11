@@ -1,0 +1,8 @@
+mixin ga(id)
+    //- Pass your ga id, as attribute, eg. +ga('yourid12345')
+    script.
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', '!{id}', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+    script(src='https://www.google-analytics.com/analytics.js')
+
++ga('UA-169231583-1')
