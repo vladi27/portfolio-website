@@ -112,7 +112,8 @@
   var count = 0;
   function Type() {
     // Get substring with 1 characater added
-    if ($(window).width() < 514) {
+    //514
+    if ($(window).width() < 890) {
       _CONTENT = ["Hey there!", "I'm Vlad.", "Welcome!"];
     } else {
       _CONTENT = [
