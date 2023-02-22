@@ -1,6 +1,6 @@
 /*!
     * Start Bootstrap - SB UI Kit Pro v1.0.2 (https://shop.startbootstrap.com/product/sb-ui-kit-pro)
-    * Copyright 2013-2021 Start Bootstrap
+    * Copyright 2013-2023 Start Bootstrap
     * Licensed under SEE_LICENSE (https://github.com/BlackrockDigital/sb-ui-kit-pro/blob/master/LICENSE)
     */
     (function($) {
@@ -111,8 +111,8 @@
 
   var count = 0;
   function Type() {
-    // Get substring with 1 characater added
-    //514
+    //Get substring with 1 characater added
+    // 514
     if ($(window).width() < 890) {
       _CONTENT = ["Hey there!", "I'm Vlad.", "Welcome!"];
     } else {
